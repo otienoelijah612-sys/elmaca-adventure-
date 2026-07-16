@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 
 const highlights = [
   "Outdoor expeditions across East Africa",
-  "Hiking, camping & road trip experiences",
+  "Hiking, camping &amp; road trip experiences",
   "Meaningful community connections",
   "Sustainable and responsible travel",
 ];
@@ -15,26 +15,21 @@ export function AboutSection() {
     <section id="about" className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-2">
-
-          {/* LEFT SIDE */}
+          {/* Left Image */}
           <AnimatedSection>
-            <div className="relative">
-
-              <div className="overflow-hidden rounded-3xl shadow-2xl">
-                <Image
-                  src="/images/about-group.jpg"
-                  alt="Elmaca Adventure Community"
-                  width={900}
-                  height={700}
-                  priority
-                  className="h-[650px] w-full object-cover"
-                />
-              </div>
-
+            <div className="overflow-hidden rounded-3xl shadow-2xl">
+              <Image
+                src="/images/about-group.jpg"
+                alt="Elmaca Adventure Community"
+                width={900}
+                height={700}
+                priority
+                className="h-[650px] w-full object-cover"
+              />
             </div>
           </AnimatedSection>
 
-          {/* RIGHT SIDE */}
+          {/* Right Content */}
           <AnimatedSection delay={200}>
             <SectionHeading
               label="About Us"
@@ -43,7 +38,6 @@ export function AboutSection() {
             />
 
             <div className="mt-6 space-y-5 text-lg leading-8 text-navy/80">
-
               <p>
                 <strong>Elmaca Adventure</strong> is a Kenyan adventure and
                 travel company that organises outdoor expeditions and
@@ -52,16 +46,15 @@ export function AboutSection() {
 
               <p>
                 It focuses on connecting participants with nature through
-                hiking, camping, road trips and cultural exploration
+                hiking, camping, road trips, and cultural exploration
                 experiences.
               </p>
 
               <p>
-                The organisation is part of Kenya's growing eco-tourism and
-                adventure-travel movement, which emphasises sustainable travel
-                and community engagement.
+                The organisation is part of Kenya&apos;s growing eco-tourism and
+                adventure-travel movement, which emphasises sustainable travel,
+                meaningful connections, and community engagement.
               </p>
-
             </div>
 
             <ul className="mt-10 space-y-4">
@@ -72,9 +65,7 @@ export function AboutSection() {
                 </li>
               ))}
             </ul>
-
           </AnimatedSection>
-
         </div>
       </div>
     </section>

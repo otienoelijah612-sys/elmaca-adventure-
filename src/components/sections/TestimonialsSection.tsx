@@ -23,8 +23,10 @@ export function TestimonialsSection() {
             >
               <div className="relative flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
+                {/* Quote Icon */}
                 <Quote className="absolute right-6 top-6 h-10 w-10 text-orange/20" />
 
+                {/* Rating */}
                 <div className="mb-5 flex gap-1">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star
@@ -34,23 +36,23 @@ export function TestimonialsSection() {
                   ))}
                 </div>
 
+                {/* Testimonial */}
                 <p className="flex-1 text-base italic leading-relaxed text-navy/80">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </p>
 
+                {/* Customer */}
                 <div className="mt-8 border-t border-navy/10 pt-6">
                   <div className="flex items-center gap-4">
-
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange font-bold text-lg text-white">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange text-lg font-bold text-white">
                       {testimonial.name.charAt(0)}
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-lg text-navy">
+                      <h4 className="text-lg font-semibold text-navy">
                         {testimonial.name}
                       </h4>
                     </div>
-
                   </div>
                 </div>
 
