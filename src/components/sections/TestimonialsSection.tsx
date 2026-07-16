@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Quote, Star } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -12,16 +11,21 @@ export function TestimonialsSection() {
           <SectionHeading
             label="Testimonials"
             title="What Our Adventurers Say"
-            description="Real stories from real explorers who've experienced the Elmaca difference."
+            description="Hear from members who have explored Kenya with Elmaca Adventure."
           />
         </AnimatedSection>
 
         <div className="grid gap-8 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <AnimatedSection key={testimonial.name} delay={index * 150}>
-              <div className="relative flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:shadow-xl">
-                <Quote className="absolute top-6 right-6 h-10 w-10 text-orange/20" />
-                <div className="mb-4 flex gap-1">
+            <AnimatedSection
+              key={testimonial.name}
+              delay={index * 150}
+            >
+              <div className="relative flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                <Quote className="absolute right-6 top-6 h-10 w-10 text-orange/20" />
+
+                <div className="mb-5 flex gap-1">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star
                       key={i}
@@ -29,26 +33,27 @@ export function TestimonialsSection() {
                     />
                   ))}
                 </div>
-                <p className="flex-1 text-navy/80 leading-relaxed italic">
-                  &ldquo;{testimonial.quote}&rdquo;
+
+                <p className="flex-1 text-base italic leading-relaxed text-navy/80">
+                  "{testimonial.quote}"
                 </p>
-                <div className="mt-6 flex items-center gap-4 border-t border-navy/10 pt-6">
-                  <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                    <Image
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                      sizes="48px"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-navy">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm text-navy/60">{testimonial.role}</p>
+
+                <div className="mt-8 border-t border-navy/10 pt-6">
+                  <div className="flex items-center gap-4">
+
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange font-bold text-lg text-white">
+                      {testimonial.name.charAt(0)}
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-lg text-navy">
+                        {testimonial.name}
+                      </h4>
+                    </div>
+
                   </div>
                 </div>
+
               </div>
             </AnimatedSection>
           ))}

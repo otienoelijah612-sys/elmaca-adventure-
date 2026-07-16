@@ -1,37 +1,20 @@
-export type Testimonial = {
-  quote: string;
-  name: string;
-  role: string;
-  avatar: string;
-  rating: number;
-};
-
-export const testimonials: Testimonial[] = [
+export const testimonials = [
   {
+    name: "Frederick",
     quote:
-      "Elmaca Adventure completely changed how I see Kenya. The Mara safari was flawlessly organized — every detail from accommodation to game drives exceeded expectations.",
-    name: "Sarah Wanjiku",
-    role: "Marketing Director, Nairobi",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80",
+      "The Kit Mikayi adventure was an unforgettable experience. The scenery, organization, and friendly atmosphere made it one of the best trips I've ever joined. I can't wait for the next adventure.",
     rating: 5,
   },
   {
+    name: "Cedella",
     quote:
-      "Our company team-building retreat was incredible. The guides created challenges that brought our team closer together while exploring stunning landscapes.",
-    name: "James Ochieng",
-    role: "CEO, TechStart Africa",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80",
+      "Palm Beach Uhendo was simply amazing. Everything was well planned, the location was beautiful, and I met wonderful people. Elmaca Adventure truly creates memorable experiences.",
     rating: 5,
   },
   {
+    name: "Cate",
     quote:
-      "The coastal road trip was the adventure of a lifetime. I made friends in the WhatsApp community before the trip even started — that's the Elmaca magic.",
-    name: "Amina Hassan",
-    role: "Travel Blogger",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80",
+      "Our Kakamega Forest adventure was peaceful and exciting at the same time. Walking through the rainforest while learning about nature made the trip unique. I highly recommend Elmaca Adventure.",
     rating: 5,
   },
 ];

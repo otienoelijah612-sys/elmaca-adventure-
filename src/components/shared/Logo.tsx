@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { Mountain } from "lucide-react";
-import { SITE_NAME } from "@/lib/constants";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type LogoProps = {
@@ -8,40 +7,25 @@ type LogoProps = {
   variant?: "light" | "dark";
 };
 
-export function Logo({ className, variant = "light" }: LogoProps) {
+export function Logo({ className }: LogoProps) {
   return (
     <Link
       href="#home"
-      className={cn("group flex items-center gap-2.5", className)}
+      className={cn(
+        "group flex items-center transition-transform duration-300 hover:scale-105",
+        className
+      )}
     >
-      <span
-        className={cn(
-          "flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105",
-          variant === "light"
-            ? "bg-orange text-white"
-            : "bg-navy text-white",
-        )}
-      >
-        <Mountain className="h-5 w-5" strokeWidth={2.5} />
-      </span>
-      <span className="flex flex-col leading-none">
-        <span
-          className={cn(
-            "font-display text-lg font-bold tracking-tight",
-            variant === "light" ? "text-white" : "text-navy",
-          )}
-        >
-          {SITE_NAME.split(" ")[0]}
-        </span>
-        <span
-          className={cn(
-            "text-xs font-medium tracking-[0.2em] uppercase",
-            variant === "light" ? "text-orange" : "text-orange",
-          )}
-        >
-          {SITE_NAME.split(" ")[1]}
-        </span>
-      </span>
+      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg overflow-hidden">
+        <Image
+          src="/images/ELMACA LOGO.png"
+          alt="Elmaca Adventure"
+          width={40}
+          height={40}
+          priority
+          className="object-contain scale-110"
+        />
+      </div>
     </Link>
   );
 }

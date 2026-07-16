@@ -6,17 +6,16 @@ export const NAV_LINKS = [
   { href: "#home", label: "Home" },
   { href: "#adventures", label: "Adventures" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#team-building", label: "Team Building" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ] as const;
 
 export const CONTACT = {
-  phone: "+254 712 345 678",
-  email: "hello@elmacaadventure.com",
-  location: "Nairobi, Kenya",
-  whatsapp: "https://wa.me/254712345678",
-  whatsappCommunity: "https://chat.whatsapp.com/example",
+  phone: "+254 715 371364",
+  email: "elmacaadventure@gmail.com",
+  location: "Kisumu, Kenya",
+  whatsapp: "https://wa.me/254715371364",
+  whatsappCommunity: "https://chat.whatsapp.com/JqAlT3TqsI388HPrR69JL9",
 } as const;
 
 export const SOCIAL_LINKS = [
@@ -27,27 +26,21 @@ export const SOCIAL_LINKS = [
 
 export const WHY_CHOOSE_US = [
   {
-    icon: "map" as const,
-    title: "Expert Local Guides",
+    title: "Price Guarantee",
     description:
-      "Our passionate guides know every trail, hidden gem, and cultural story across Kenya's most breathtaking landscapes.",
+      "Best value for unforgettable adventures with transparent pricing and no hidden charges.",
+    icon: "shield",
   },
   {
-    icon: "shield" as const,
-    title: "Safety First",
+    title: "Easy & Quick Booking",
     description:
-      "Fully insured trips, vetted routes, and professional equipment ensure your adventure is thrilling yet secure.",
+      "Reserve your adventure in minutes through a simple and hassle-free booking process.",
+    icon: "booking",
   },
   {
-    icon: "users" as const,
     title: "Community Driven",
     description:
-      "Join a vibrant community of explorers who share stories, tips, and lifelong friendships beyond every journey.",
+      "Join a growing community of explorers, make new friends and create unforgettable memories together.",
+    icon: "community",
   },
-  {
-    icon: "compass" as const,
-    title: "Curated Experiences",
-    description:
-      "From sunrise safaris to coastal road trips, every itinerary is thoughtfully designed for unforgettable moments.",
-  },
-] as const;
+];

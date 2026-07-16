@@ -19,7 +19,6 @@ export default function HomePage() {
         <AboutSection />
         <FeaturedAdventures />
         <WhyChooseUs />
-        <TeamBuildingSection />
         <GallerySection />
         <TestimonialsSection />
         <FAQSection />
